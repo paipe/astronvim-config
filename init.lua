@@ -26,7 +26,7 @@ local config = {
   },
 
   -- Set colorscheme to use
-  colorscheme = "default_theme",
+  colorscheme = "PaperColor",
 
   -- Add highlight groups in any theme
   highlights = {
@@ -47,6 +47,16 @@ local config = {
       spell = false, -- sets vim.opt.spell
       signcolumn = "auto", -- sets vim.opt.signcolumn to auto
       wrap = false, -- sets vim.opt.wrap
+      -- всегда показывать командную строку внизу, а не только когда вводишь команды
+      cmdheight = 1,
+      -- показывать визуальный ограничитель на 119 символе
+      colorcolumn = '119',
+      -- что-то про отступы и шифты
+      -- smartindent = true,
+      -- smarttab = true,
+      -- shiftwidth = 4,
+      -- tabstop = 4,
+      background = 'light',
     },
     g = {
       mapleader = " ", -- sets vim.g.mapleader
@@ -144,13 +154,7 @@ local config = {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = true, -- enable or disable format on save globally
-        allow_filetypes = { -- enable format on save for specified filetypes only
-          -- "go",
-        },
-        ignore_filetypes = { -- disable format on save for specified filetypes
-          -- "python",
-        },
+        enabled = false, -- enable or disable format on save globally
       },
       disabled = { -- disable formatting capabilities for the listed language servers
         -- "sumneko_lua",
